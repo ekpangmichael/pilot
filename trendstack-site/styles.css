@@ -2576,3 +2576,274 @@ section {
 .phase-dot {
   background: var(--paper);
 }
+
+/* =========================================================
+   MOBILE REFINEMENTS
+   ========================================================= */
+
+/* Fixed nav shouldn't cover anchor targets when jumped to */
+section[id] { scroll-margin-top: 90px; }
+@media (max-width: 720px) { section[id] { scroll-margin-top: 70px; } }
+
+/* No horizontal scroll on any device */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, canvas { max-width: 100%; height: auto; }
+
+/* ===== Top nav on small screens ===== */
+@media (max-width: 720px) {
+  .top-nav-inner {
+    padding: 12px 18px;
+    gap: 12px;
+  }
+  .brand {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    gap: 8px;
+  }
+  .brand-mark {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+  .nav-cta {
+    padding: 9px 14px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 420px) {
+  .brand { font-size: 10px; letter-spacing: 0.08em; }
+  .nav-cta { padding: 8px 10px; }
+}
+
+/* ===== Cover ===== */
+@media (max-width: 720px) {
+  .cover {
+    padding-top: 90px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+  .cover-grid { gap: 36px; }
+
+  .cover-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 18px;
+    align-items: start;
+    padding-bottom: 20px;
+  }
+  .cover-meta-block { font-size: 10px; letter-spacing: 0.14em; }
+
+  .cover-title { font-size: clamp(48px, 16vw, 88px); }
+  .cover-subtitle { font-size: 18px; }
+  .cover-blurb { font-size: 15px; }
+
+  .cover-bottom { gap: 28px; padding-top: 28px; }
+}
+@media (max-width: 420px) {
+  .cover-meta { grid-template-columns: 1fr; gap: 12px; }
+  .cover-title { font-size: clamp(44px, 14vw, 72px); }
+}
+
+/* ===== Section rhythm on mobile ===== */
+@media (max-width: 720px) {
+  section { padding: 72px 0; }
+  .section-title { font-size: clamp(32px, 9vw, 52px); }
+  .section-lede { font-size: 16px; margin-bottom: 40px; }
+  .section-tag { margin-bottom: 22px; }
+}
+@media (max-width: 420px) {
+  section { padding: 56px 0; }
+  .container, .container-narrow { padding: 0 18px; }
+}
+
+/* ===== Principle banner ===== */
+@media (max-width: 720px) {
+  .principle { padding: 40px 0; }
+  .principle-text { font-size: 18px; line-height: 1.4; }
+  .principle-mark { font-size: 56px; }
+}
+
+/* ===== Callout / pull quote — reduce inner padding on mobile ===== */
+@media (max-width: 720px) {
+  .callout {
+    padding: 24px 20px 24px 24px;
+    margin-top: 32px;
+  }
+  .callout::before { width: 4px; }
+  .callout-text { font-size: 17px; line-height: 1.4; }
+
+  .pull-quote {
+    margin-top: 56px;
+    padding: 0 8px;
+  }
+  .pull-quote-text { font-size: clamp(24px, 6.4vw, 36px); }
+}
+
+/* ===== Pivot grid — improve the FROM→TO connector on mobile ===== */
+@media (max-width: 720px) {
+  .pivot-col-head { padding: 18px 20px; }
+  .pivot-col-head .word { font-size: 28px; }
+  .pivot-cell { padding: 16px 20px; font-size: 14px; }
+}
+
+/* ===== Reasons grid — already collapses; tighten padding ===== */
+@media (max-width: 720px) {
+  .reason { padding: 28px 22px; }
+  .reason-title { font-size: 21px; }
+}
+
+/* ===== Receipts — featured card shouldn't lift when stacked ===== */
+@media (max-width: 980px) {
+  .receipt.featured { transform: none; }
+}
+@media (max-width: 720px) {
+  .receipt { padding: 24px 22px 20px; font-size: 12px; }
+  .receipt-name { font-size: 19px; margin-bottom: 18px; }
+  .receipt-total .amount { font-size: 20px; }
+}
+
+/* ===== Workflow steps — go single column on very small screens ===== */
+@media (max-width: 420px) {
+  .workflow-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== Timeline / phases — tighten left rail on narrow mobile ===== */
+@media (max-width: 720px) {
+  .phase { padding-left: 64px; padding-bottom: 44px; }
+  .phase-title { font-size: 24px; }
+  .phase-desc { font-size: 14.5px; }
+  .timeline::before { left: 20px; }
+  .phase-dot { left: 6px; width: 28px; height: 28px; font-size: 10px; }
+}
+@media (max-width: 420px) {
+  .phase { padding-left: 52px; }
+  .timeline::before { left: 14px; }
+  .phase-dot { left: 0; width: 26px; height: 26px; }
+}
+
+/* Targets card — no longer sticky on mobile, less tall */
+@media (max-width: 980px) {
+  .targets-card {
+    position: static;
+    top: auto;
+    padding: 28px 24px;
+  }
+  .target-value { font-size: 26px; }
+}
+
+/* ===== Tier cards ===== */
+@media (max-width: 720px) {
+  .tier { padding: 28px 24px; }
+  .tier-name { font-size: 36px; }
+  .tier-list li { font-size: 14px; }
+}
+
+/* ===== Stop/Keep/Start ===== */
+@media (max-width: 720px) {
+  .sks-col { padding: 26px 22px; }
+  .sks-title { font-size: 32px; margin-bottom: 16px; }
+}
+
+/* ===== Sales — WhatsApp mocks, discovery card ===== */
+@media (max-width: 720px) {
+  .sales-grid { gap: 32px; }
+  .chats-stack { gap: 22px; }
+  .chat-body { min-height: 160px; }
+  .bubble { font-size: 13.5px; max-width: 88%; }
+  .discovery-card { padding: 26px 22px; }
+  .discovery-title { font-size: 22px; }
+}
+
+/* ===== Sales stages — drop to 2-col earlier ===== */
+@media (max-width: 720px) {
+  .stages { grid-template-columns: repeat(2, 1fr); }
+  .stage { padding: 18px 14px; }
+}
+@media (max-width: 420px) {
+  .stages { grid-template-columns: 1fr; }
+  .stage { border-right: none; border-bottom: 1px solid var(--line); }
+  .stage:last-child { border-bottom: none; }
+}
+
+/* ===== Objections (FAQ-style) ===== */
+@media (max-width: 720px) {
+  .objection-summary {
+    padding: 18px 0;
+    gap: 14px;
+    font-size: 18px;
+    align-items: flex-start;
+  }
+  .objection-summary .q { gap: 10px; }
+  .objection-toggle { width: 30px; height: 30px; flex-shrink: 0; }
+  .objection-body { font-size: 15px; padding-bottom: 22px; }
+}
+
+/* ===== Metrics row — extra step-down on phones ===== */
+@media (max-width: 420px) {
+  .metrics-row { grid-template-columns: 1fr 1fr; }
+  .metrics-row .metric { padding: 22px 16px; }
+  .metric-value { font-size: clamp(28px, 8vw, 38px); }
+}
+
+/* ===== Scorecard cards ===== */
+@media (max-width: 720px) {
+  .score-card { padding: 26px 22px; }
+  .score-evidence { font-size: 19px; }
+}
+
+/* ===== Dashboard mock — keep horizontal scroll, lock cell width ===== */
+@media (max-width: 720px) {
+  .dashboard-table { font-size: 11px; min-width: 760px; }
+  .dashboard-name { font-size: 10px; }
+  .dashboard-rule { font-size: 11px; padding: 0 8px; }
+}
+
+/* ===== Closing section ===== */
+@media (max-width: 720px) {
+  .closing { padding: 90px 0 50px; }
+  .closing-title { font-size: clamp(40px, 11vw, 64px); margin-bottom: 24px; }
+  .closing-blurb { font-size: 16px; margin-bottom: 44px; }
+  .colophon {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 56px;
+    padding-top: 28px;
+  }
+}
+@media (max-width: 420px) {
+  .colophon { grid-template-columns: 1fr; }
+}
+
+/* ===== Scroll cue — anchored lower-left, smaller on mobile ===== */
+@media (max-width: 720px) {
+  .scroll-cue { bottom: 20px; left: 18px; font-size: 9px; gap: 8px; }
+  .scroll-cue-line { width: 28px; }
+}
+
+/* ===== Tap targets ===== */
+@media (max-width: 720px) {
+  .nav-cta,
+  .cover-toc-list a,
+  .objection-summary,
+  .discovery-list li {
+    min-height: 32px;
+  }
+}
+
+/* ===== Page-specific: economics findings/rules grids ===== */
+@media (max-width: 720px) {
+  .findings-grid .finding { padding: 26px 22px; }
+  .finding-title { font-size: 20px; }
+  .rules-grid { gap: 14px; }
+  .rule-card { padding: 22px 20px; }
+  .rule-amount { font-size: 28px; }
+}
+
+/* ===== Tables (economics page bands/matrix) ===== */
+@media (max-width: 720px) {
+  .bands, .matrix { font-size: 13.5px; }
+  .bands th, .bands td, .matrix th, .matrix td { padding: 12px 14px; }
+  .bands .tier-type { font-size: 16px; }
+}

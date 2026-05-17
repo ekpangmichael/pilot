@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TrendStack Nigeria — The Numbers (Pricing &amp; Creator Economics)</title>
-<meta name="description" content="My research on TrendStack pricing and creator economics. Will creators play, will SMEs pay, and the model I'm proposing — from Michael to Daniel and Samuel." />
+<title>TrendStack Nigeria — The Numbers</title>
+<meta name="description" content="Our research on TrendStack pricing and creator economics. Will creators take our gigs? Will SMEs actually pay? And the model we're proposing." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -59,7 +59,6 @@
     color: var(--ink-soft);
   }
 
-  /* compact 2-col rules */
   .rules-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -96,7 +95,6 @@
     color: var(--ink-soft);
   }
 
-  /* payout matrix table */
   .matrix {
     width: 100%;
     border-collapse: collapse;
@@ -129,7 +127,6 @@
     .matrix th:nth-child(2), .matrix td:nth-child(2) { display: none; }
   }
 
-  /* fee bands table */
   .bands {
     width: 100%;
     border-collapse: collapse;
@@ -153,7 +150,6 @@
   .bands .audience { color: var(--ink-soft); }
   .bands .fee { font-family: var(--mono); color: var(--teal); white-space: nowrap; }
 
-  /* footnotes */
   sup.cite {
     font-family: var(--mono);
     font-size: 10px;
@@ -178,29 +174,13 @@
   .sources a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px dashed var(--line-strong); }
   .sources a:hover { color: var(--teal); }
   .sources .num { color: var(--teal); margin-right: 8px; }
-
-  /* memo signoff */
-  .signoff {
-    margin-top: 64px;
-    font-family: var(--display);
-    font-size: 18px;
-    color: var(--ink-soft);
-    font-style: italic;
-  }
-  .signoff .name {
-    color: var(--ink);
-    font-style: normal;
-    font-weight: 500;
-  }
 </style>
 </head>
 <body>
 
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- =========================================================
-     TOP NAV
-     ========================================================= -->
+<!-- TOP NAV -->
 <header class="top-nav">
   <div class="top-nav-inner">
     <a href="index.html" class="brand">
@@ -219,9 +199,7 @@
   </div>
 </header>
 
-<!-- =========================================================
-     COVER
-     ========================================================= -->
+<!-- COVER -->
 <section class="cover" id="top">
   <div class="container">
     <div class="cover-grid">
@@ -231,16 +209,16 @@
           <span>The Numbers</span>
         </div>
         <div class="cover-meta-block">
-          <span>From</span>
-          <span>Michael · CEO</span>
-        </div>
-        <div class="cover-meta-block">
-          <span>To</span>
-          <span>Daniel · Samuel</span>
-        </div>
-        <div class="cover-meta-block">
           <span>17 May 2026</span>
-          <span>Research memo</span>
+          <span>Version 1.0</span>
+        </div>
+        <div class="cover-meta-block">
+          <span>Lagos · Nigeria</span>
+          <span>Pricing &amp; creators</span>
+        </div>
+        <div class="cover-meta-block">
+          <span>Status</span>
+          <span>For decision</span>
         </div>
       </div>
 
@@ -248,34 +226,33 @@
         <div>
           <h1 class="cover-title">
             <span class="word">The numbers.</span><br />
-            <span class="word italic">My research.</span>
+            <span class="word italic">What we found.</span>
           </h1>
         </div>
         <p class="cover-subtitle">
-          Daniel, Samuel — will creators take our gigs, and will SMEs
-          actually pay us? Here's what I found and the model I'm proposing.
+          Will creators take our gigs? Will SMEs actually pay us?
+          The honest answer, and the model we're proposing.
         </p>
       </div>
 
       <div class="cover-bottom">
         <p class="cover-blurb">
-          You both asked the right two questions: <em>will creators still
-          take TrendStack gigs when TikTok, Instagram, YouTube and Meta
-          already pay them?</em> And <em>will SMEs pay us when they can
-          just run ads themselves?</em> I spent the last week digging in.
-          This memo is my honest answer, the pricing math behind it, and
-          the three packages I think we should sell. Let's read it
-          together before our next founders' meeting.
+          Two questions decide whether TrendStack is a real business or
+          just a nice idea: <em>will creators still take our gigs when
+          TikTok, Instagram, YouTube and Meta already pay them?</em> And
+          <em>will SMEs pay us when they can just run ads themselves?</em>
+          Below is the research, the pricing math, the three packages we
+          should sell, and how we decide if the model works.
         </p>
         <div class="cover-toc">
-          <div class="cover-toc-label">In this memo</div>
+          <div class="cover-toc-label">Inside</div>
           <ul class="cover-toc-list">
             <li><a href="#findings"><span class="num">01</span> Six findings</a></li>
             <li><a href="#creators"><span class="num">02</span> Will creators play?</a></li>
             <li><a href="#pricing"><span class="num">03</span> The pricing math</a></li>
             <li><a href="#packages"><span class="num">04</span> Our packages</a></li>
             <li><a href="#positioning"><span class="num">05</span> Us vs. ads</a></li>
-            <li><a href="#verdict"><span class="num">06</span> My verdict</a></li>
+            <li><a href="#verdict"><span class="num">06</span> Our verdict</a></li>
           </ul>
         </div>
       </div>
@@ -289,113 +266,105 @@
   </div>
 </section>
 
-<!-- =========================================================
-     PRINCIPLE
-     ========================================================= -->
+<!-- PRINCIPLE -->
 <section class="principle">
   <div class="container">
     <div class="principle-inner">
       <div class="principle-mark">¶</div>
       <p class="principle-text">
         We are <strong>not selling cheap influence.</strong>
-        We are selling <strong>managed creator content and campaign
-        execution.</strong> The moment we sell "many influencers for
-        ₦100k", the unit economics collapse on us.
+        We are selling <strong>managed creator content and execution.</strong>
+        The moment we sell "many influencers for ₦100k", our unit
+        economics collapse.
       </p>
     </div>
   </div>
 </section>
 
-<!-- =========================================================
-     01 — SIX FINDINGS (TL;DR)
-     ========================================================= -->
+<!-- 01 SIX FINDINGS -->
 <section id="findings">
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Chapter 01 / Six findings</div>
-      <h2 class="section-title">If you read <em>nothing else.</em></h2>
+      <h2 class="section-title">If we read <em>nothing else.</em></h2>
       <p class="section-lede">
-        Six things I want both of you to take away before we go deeper.
-        Everything that follows in this memo is the math, evidence and
-        examples that got me here.
+        Six takeaways. Everything below is the math and evidence that
+        got us here.
       </p>
     </div>
 
     <div class="findings-grid reveal">
       <div class="finding">
         <div class="finding-num">01 · Creators will play</div>
-        <h3 class="finding-title">Yes — but only the right ones.</h3>
+        <h3 class="finding-title">Yes — the right ones.</h3>
         <p class="finding-desc">
-          Platform monetization in Nigeria is patchy. Most nano and lower-micro
-          creators are not earning meaningful platform money yet. They will take
-          a fair, reliable ₦25k–₦80k gig from us. Established 100k+ creators
-          won't, and we shouldn't chase them.
+          Platform pay in Nigeria is patchy. Most nano and lower-micro
+          creators aren't earning real platform money yet. They'll take a
+          fair ₦25k–₦80k gig from us. The 100k+ creators won't — and we
+          shouldn't chase them.
         </p>
       </div>
       <div class="finding">
-        <div class="finding-num">02 · ₦100k is not a campaign</div>
+        <div class="finding-num">02 · ₦100k isn't a campaign</div>
         <h3 class="finding-title">It's a content test.</h3>
         <p class="finding-desc">
-          ₦100k with 20% margin leaves ₦16k per creator across 5 creators.
-          That buys us bad work and disappointed SMEs. ₦100k should only
-          ever buy 1–2 creator videos — never a full campaign.
+          ₦100k with 20% margin = ₦16k per creator across five creators.
+          That buys bad work and a disappointed SME. ₦100k only ever buys
+          1–2 videos. Never a campaign.
         </p>
       </div>
       <div class="finding">
         <div class="finding-num">03 · Our floor is ₦250k</div>
-        <h3 class="finding-title">₦500k+ is the real sweet spot.</h3>
+        <h3 class="finding-title">₦500k+ is the sweet spot.</h3>
         <p class="finding-desc">
-          Below ₦250k–₦300k we can't pay creators properly, manage the
-          campaign, track results, write the report, and still keep margin.
-          ₦500k is where the model becomes repeatable.
+          Below ₦250k–₦300k we can't pay creators, run the campaign,
+          track results, write the report and keep margin. ₦500k is
+          where the model becomes repeatable.
         </p>
       </div>
       <div class="finding">
         <div class="finding-num">04 · SMEs will pay</div>
-        <h3 class="finding-title">But not as an ad replacement.</h3>
+        <h3 class="finding-title">Not as an ad replacement.</h3>
         <p class="finding-desc">
-          They'll pay us because we give them creator content, local trust,
-          execution and a report. Ads alone don't give them that. We
-          position as complementary to TikTok/IG ads — not as a cheaper
-          alternative.
+          They pay us for creator content, local trust, execution and a
+          report — what ads alone don't give them. We position as
+          complementary to TikTok/IG ads, not a cheaper alternative.
         </p>
       </div>
       <div class="finding">
         <div class="finding-num">05 · Fixed fees, no views</div>
-        <h3 class="finding-title">Pay creators on completion.</h3>
+        <h3 class="finding-title">Pay on completion.</h3>
         <p class="finding-desc">
-          Fixed content fee + posting confirmation + capped sales/code bonus
-          + repeat-creator bonus. No view-based payouts — that's where
-          fraud lives. Product samples count for beauty / food / fashion.
+          Fixed content fee + posting confirmation + capped sales/code
+          bonus + repeat-creator bonus. No view-based payouts — that's
+          where fraud lives. Product samples count for beauty, food and
+          fashion.
         </p>
       </div>
       <div class="finding">
         <div class="finding-num">06 · The pivot clause</div>
         <h3 class="finding-title">If SMEs only have ₦100k, we pivot.</h3>
         <p class="finding-desc">
-          If our 30-SME test says budgets are stuck at ₦50k–₦100k, we don't
-          force the influencer model. We pivot to <em>UGC content for ads</em>:
-          creators make videos, the SME boosts them through TikTok / Meta
-          ads. Cheaper for them, cleaner for us.
+          If our 30-SME test shows budgets stuck at ₦50k–₦100k, we don't
+          force the influencer model. We pivot to <em>UGC content for
+          ads</em>: creators make videos, the SME boosts them through
+          TikTok / Meta ads. Cheaper for them, cleaner for us.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =========================================================
-     02 — WILL CREATORS PLAY?
-     ========================================================= -->
+<!-- 02 WILL CREATORS PLAY -->
 <section id="creators" class="reasons">
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Chapter 02 / Will creators play?</div>
       <h2 class="section-title">Platform money <em>doesn't kill us.</em></h2>
       <p class="section-lede">
-        Samuel, this was your concern — and it's fair. Here's the honest
-        picture I pieced together from public Nigerian-creator sources.
-        Platform monetization raises the bar for what we have to offer
-        creators. It doesn't take them off the table.
+        Our biggest worry. Here's the honest picture from public sources
+        on Nigerian creators. Platform monetization raises the bar for
+        what we offer creators — it doesn't take them off the table.
       </p>
     </div>
 
@@ -404,28 +373,27 @@
         <div class="reason-num">YOUTUBE</div>
         <h3 class="reason-title">Eligibility, not income</h3>
         <p class="reason-desc">
-          YouTube's Partner Program is available in Nigeria, but creators
-          still have to meet thresholds (500 subs for entry-level access,
-          higher for ad revenue) before earning anything meaningful.<sup class="cite">1</sup>
-          Most of our nanos aren't there yet.
+          Partner Program is open in Nigeria but creators need 500 subs
+          for entry-level access and higher thresholds for ad
+          revenue.<sup class="cite">1</sup> Most of our nanos aren't there yet.
         </p>
       </div>
       <div class="reason">
         <div class="reason-num">META</div>
-        <h3 class="reason-title">Open — but eligibility-based</h3>
+        <h3 class="reason-title">Open — eligibility-based</h3>
         <p class="reason-desc">
           Meta opened in-stream ads and Reels monetization to Nigerian
-          creators, but it's still eligibility-based — not automatic
-          income for everyone.<sup class="cite">2</sup>
+          creators. Still eligibility-based — not automatic
+          income.<sup class="cite">2</sup>
         </p>
       </div>
       <div class="reason">
         <div class="reason-num">TIKTOK</div>
         <h3 class="reason-title">No Creator Rewards in Nigeria</h3>
         <p class="reason-desc">
-          As of late 2025, Nigeria was not in TikTok's Creator Rewards
-          Program. Nigerian TikTok creators earn from brand partnerships,
-          live gifts, affiliate, services and product sales — not views.<sup class="cite">3</sup>
+          As of late 2025, Nigeria isn't in TikTok's Creator Rewards
+          Program. Nigerian creators earn from brand deals, live gifts,
+          affiliate, services and product sales.<sup class="cite">3</sup>
         </p>
       </div>
     </div>
@@ -433,17 +401,16 @@
     <div class="callout reveal">
       <div class="callout-label">What this means for us</div>
       <p class="callout-text">
-        Creators will say yes when we offer
-        <strong>guaranteed payment, relevant briefs, simple deliverables,
-        fast payout, repeat access</strong> — and we don't make them look
-        bad in front of their audience. That's the actual creator pitch.
+        Creators say yes when we offer <strong>guaranteed payment, relevant
+        briefs, simple deliverables, fast payout, repeat access</strong> —
+        and we don't make them look bad to their audience. That's our pitch.
       </p>
     </div>
 
     <h3 style="font-family:var(--display); font-size:24px; color:var(--ink); margin-top:64px; margin-bottom:14px; font-weight:450;">Realistic Nigerian fee bands</h3>
     <p style="font-size:14.5px; color:var(--ink-soft); margin-bottom:8px; max-width:65ch;">
-      Rates vary by niche, city, deliverables, usage rights. These are
-      starting test bands from an industry source<sup class="cite">4</sup>, mapped to who we should target.
+      Rates vary by niche, city, deliverables and usage rights. Starting
+      test bands<sup class="cite">4</sup>, mapped to who we target.
     </p>
     <div style="overflow-x:auto;">
     <table class="bands">
@@ -479,58 +446,54 @@
     </table>
     </div>
     <p style="font-size:13.5px; color:var(--ink-muted); margin-top:14px; max-width:65ch;">
-      <strong style="color:var(--ink);">Our target band:</strong>
-      strong nano + lower micro. Good content, real engagement, not yet
-      expensive, hungry for structured brand work. We do not chase
-      100k+ creators — they're not our early market.
+      <strong style="color:var(--ink);">Our target:</strong> strong nano
+      and lower micro. Good content, real engagement, not yet expensive,
+      hungry for brand work. We don't chase 100k+ creators — not our
+      early market.
     </p>
   </div>
 </section>
 
-<!-- =========================================================
-     03 — THE PRICING MATH
-     ========================================================= -->
+<!-- 03 PRICING MATH -->
 <section id="pricing">
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Chapter 03 / The pricing math</div>
       <h2 class="section-title">Why ₦100k <em>breaks us.</em></h2>
       <p class="section-lede">
-        Daniel, this is the part you flagged when we last talked. Let me
-        walk through the math so we both see it the same way.
+        The math we all need to see the same way.
       </p>
     </div>
 
     <div class="callout reveal" style="background: var(--paper-2); color: var(--ink); border-left: 4px solid var(--rust);">
       <div class="callout-label" style="color: var(--rust);">The ₦100k breakdown</div>
       <p class="callout-text" style="color: var(--ink);">
-        SME pays <strong>₦100,000</strong>. We take 20% = <strong>₦20k</strong>.
-        Creator pool = <strong>₦80k</strong>. Split across 5 creators =
-        <strong>₦16k each.</strong> That gets us weak creators, weak
-        videos, late delivery and a disappointed SME. Not a business.
+        SME pays <strong>₦100,000.</strong> We take 20% = <strong>₦20k.</strong>
+        Creator pool = <strong>₦80k.</strong> Split across 5 creators =
+        <strong>₦16k each.</strong> Weak creators, weak videos, late
+        delivery, disappointed SME. Not a business.
       </p>
     </div>
 
     <h3 style="font-family:var(--display); font-size:28px; color:var(--ink); margin-top:64px; margin-bottom:14px; font-weight:450;">
-      The three price floors I'm proposing
+      Our three price floors
     </h3>
     <div class="rules-grid reveal">
       <div class="rule-card">
         <div class="rule-label">₦100k</div>
         <div class="rule-amount">Content test</div>
         <p class="rule-desc">
-          Never call this a campaign. It buys 1–2 creator videos, no
-          posting guarantee, no heavy reporting. Mostly for us to learn,
-          not to make money on.
+          Never a campaign. Buys 1–2 creator videos, no posting
+          guarantee, no heavy reporting. Mostly for learning.
         </p>
       </div>
       <div class="rule-card" style="border-color: rgba(74, 196, 189, 0.3);">
         <div class="rule-label" style="color: var(--teal);">₦250k – ₦300k</div>
         <div class="rule-amount" style="color: var(--teal-soft);">Our minimum</div>
         <p class="rule-desc">
-          The lowest price at which we can pay creators properly, run the
-          campaign, track results, write the report, and still keep margin.
-          Anyone below this number gets a content test, not a campaign.
+          Lowest price at which we pay creators properly, run the
+          campaign, track results, write the report and keep margin.
+          Below this = content test, not campaign.
         </p>
       </div>
       <div class="rule-card" style="border-color: rgba(224, 185, 78, 0.3);">
@@ -538,34 +501,30 @@
         <div class="rule-amount">Sweet spot</div>
         <p class="rule-desc">
           5–7 creators, full reporting, usage rights, optional ad boost.
-          This is where we make real margin and where the model becomes
-          repeatable. The first 5 paid campaigns should aim here.
+          Real margin lives here. The first 5 paid campaigns should aim
+          for this band.
         </p>
       </div>
     </div>
 
     <div class="payment-rule reveal" style="margin-top:48px;">
-      <strong>The rule I want us to enforce:</strong> if an SME says
-      "we only have ₦100k", we don't squeeze a 5-creator campaign into it.
-      We offer them the content test instead. If they want a real
-      campaign, the price floor is ₦250k. We hold this line on every call.
+      <strong>The rule we hold on every call:</strong> if an SME says
+      "we only have ₦100k", we offer the content test — not a
+      5-creator campaign squeezed in. Real campaigns start at ₦250k.
     </div>
   </div>
 </section>
 
-<!-- =========================================================
-     04 — PACKAGES (RECEIPTS)
-     ========================================================= -->
+<!-- 04 PACKAGES -->
 <section id="packages" class="reasons">
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Chapter 04 / Our packages</div>
       <h2 class="section-title">Three offers, <em>one model.</em></h2>
       <p class="section-lede">
-        Here are the three packages I want us to actually sell. The numbers
-        below are how I'd split each one — creator pool, our fee, tracking
-        and contingency. We'll refine after the first 3 campaigns, but
-        let's start here.
+        Three packages, with the split we'd use for each — creator pool,
+        our fee, tracking and contingency. We refine after the first 3
+        campaigns.
       </p>
     </div>
 
@@ -587,7 +546,7 @@
         <div class="receipt-line"><span class="label">No heavy report</span><span class="qty">—</span></div>
         <div class="receipt-line"><span class="label">Our fee</span><span class="qty">₦40k – ₦60k</span></div>
         <div class="receipt-total">
-          <span class="label">Use this for</span>
+          <span class="label">Use for</span>
           <span class="amount" style="font-size:14px;">Learning</span>
         </div>
         <div class="receipt-foot">
@@ -642,24 +601,22 @@
           <span class="amount" style="font-size:14px;">30%+</span>
         </div>
         <div class="receipt-foot">
-          <span class="check">✓</span> Where the model wins
+          <span class="check">✓</span> Where we win
         </div>
       </div>
     </div>
 
     <div class="payment-rule reveal" style="margin-top:60px;">
-      <strong>Why these three:</strong> Package 01 lets us say yes to tight
-      budgets without breaking ourselves. Package 02 is what we mostly sell
-      while we prove the model. Package 03 is the repeat-customer product — when
-      an SME comes back, we offer them this one. Daniel, I want the
-      tracker to capture which package every deal sits in from day one.
+      <strong>Why these three:</strong> Package 01 lets us say yes to
+      tight budgets without breaking ourselves. Package 02 is what we
+      mostly sell while we prove the model. Package 03 is the
+      repeat-customer product — when an SME comes back, we offer this one.
+      Every deal goes into the tracker against one of these from day one.
     </div>
   </div>
 </section>
 
-<!-- =========================================================
-     05 — POSITIONING: ADS vs US
-     ========================================================= -->
+<!-- 05 POSITIONING -->
 <section id="positioning" class="positioning">
   <div class="container">
     <div class="reveal">
@@ -670,7 +627,7 @@
         local trust, <em>execution</em> and a report.
       </p>
       <div class="positioning-attribution">
-        — How I want us to answer the "why not just ads?" question
+        — How we answer the "why not just ads?" question
       </div>
     </div>
 
@@ -678,16 +635,16 @@
       <div class="audience-cell">
         <div class="audience-who">What ads do</div>
         <p class="audience-promise">
-          TikTok Ads Manager lets a business set objectives, target audiences,
-          set budgets and run creative.<sup class="cite">5</sup> It's a system
-          to spend money on distribution. That's it.
+          TikTok Ads Manager lets a business set objectives, target
+          audiences, set budgets and run creative.<sup class="cite">5</sup>
+          A system for spending on distribution.
         </p>
       </div>
       <div class="audience-cell">
         <div class="audience-who">What ads don't do</div>
         <p class="audience-promise">
-          Ads do not source creators, write briefs, review content, manage
-          revisions, confirm posting, or write a report. SMEs still need
+          Ads don't source creators, write briefs, review content, manage
+          revisions, confirm posting or write a report. SMEs still need
           good creative — bad creative + paid ads is just faster money
           burning.
         </p>
@@ -695,15 +652,15 @@
       <div class="audience-cell">
         <div class="audience-who">TikTok itself agrees</div>
         <p class="audience-promise">
-          Their own small-business guide pushes an "always-engaged" model:
-          organic posts + paid campaigns + creator partnerships, with
-          Spark Ads to boost organic creator content into paid.<sup class="cite">6</sup>
+          Their own small-business guide pushes organic posts + paid
+          campaigns + creator partnerships, with Spark Ads to boost
+          organic creator content into paid.<sup class="cite">6</sup>
         </p>
       </div>
       <div class="audience-cell">
         <div class="audience-who">Where we fit</div>
         <p class="audience-promise">
-          We are the creator-content + execution layer. Our Package 03
+          We are the creator-content + execution layer. Package 03
           combines creator campaign + reusable content + optional ad
           boost — so SMEs don't have to choose between us and ads.
         </p>
@@ -712,18 +669,16 @@
   </div>
 </section>
 
-<!-- =========================================================
-     06 — CREATOR PAYOUT STRUCTURE
-     ========================================================= -->
+<!-- 06 PAYOUT STRUCTURE -->
 <section>
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Payout structure</div>
       <h2 class="section-title">How we pay <em>creators.</em></h2>
       <p class="section-lede">
-        Samuel — when you brief creators, this is the model. No view-based
-        payouts. Fixed fees on delivery, plus capped bonuses for the few
-        signals that actually matter to the business.
+        The model we use in every brief. No view-based payouts. Fixed
+        fees on delivery, plus capped bonuses on the signals that matter
+        to the business.
       </p>
     </div>
 
@@ -750,17 +705,17 @@
         <tr>
           <td class="component">View-based payout</td>
           <td class="verdict no">No</td>
-          <td class="reason">Too easy to manipulate. This is exactly where the old fraud problem lived.</td>
+          <td class="reason">Too easy to manipulate. This is exactly where our old fraud problem lived.</td>
         </tr>
         <tr>
           <td class="component">Sales / coupon-code bonus</td>
           <td class="verdict yes">Yes — capped</td>
-          <td class="reason">Tied to real business value. Cap per campaign so we never blow margin.</td>
+          <td class="reason">Tied to real business value. Capped per campaign so we never blow margin.</td>
         </tr>
         <tr>
           <td class="component">Repeat-creator bonus</td>
           <td class="verdict yes">Yes</td>
-          <td class="reason">Rewards reliability. Builds the Trusted tier on Samuel's bench.</td>
+          <td class="reason">Rewards reliability. Builds our Trusted tier.</td>
         </tr>
         <tr>
           <td class="component">Product sample</td>
@@ -770,14 +725,14 @@
         <tr>
           <td class="component">Pure barter (no cash)</td>
           <td class="verdict maybe">Maybe</td>
-          <td class="reason">Some nanos accept it. We won't rely on it alone — and never with mid-tier.</td>
+          <td class="reason">Some nanos accept it. We never rely on it alone — and never with mid-tier.</td>
         </tr>
       </tbody>
     </table>
     </div>
 
     <div class="callout reveal" style="margin-top:48px;">
-      <div class="callout-label">The creator pitch (Samuel — use this line)</div>
+      <div class="callout-label">Our pitch to creators</div>
       <p class="callout-text">
         "TrendStack gives vetted creators paid brand briefs. <strong>Fixed
         fee for approved content and posting.</strong> Trusted creators
@@ -789,18 +744,15 @@
   </div>
 </section>
 
-<!-- =========================================================
-     07 — VALIDATION TESTS
-     ========================================================= -->
+<!-- 07 VALIDATION -->
 <section class="workflow">
   <div class="container">
     <div class="reveal">
       <div class="section-tag">Validation</div>
       <h2 class="section-title">Before we commit. <em>Two tests.</em></h2>
       <p class="section-lede">
-        I want us to run two short tests in the next 14 days before we
-        lock the pricing. One on the creator side (Samuel), one on the
-        SME side (me, with Daniel pulling the responses into the tracker).
+        Two short tests in the next 14 days before we lock pricing — one
+        on the creator side, one on the SME side.
       </p>
     </div>
 
@@ -808,7 +760,7 @@
       <!-- Creator-side test -->
       <div class="discovery-card">
         <div class="discovery-title">Test 01 · Creator side</div>
-        <p class="discovery-sub">Samuel — speak to 30 creators. Same script.</p>
+        <p class="discovery-sub">Speak to 30 creators. Same script.</p>
         <p style="font-family:var(--display); font-style:italic; font-size:17px; color:var(--ink); margin-bottom:18px; line-height:1.4;">
           "What is the lowest fee you would accept for one 30-second
           brand video posted on your TikTok or Instagram, with one
@@ -828,12 +780,12 @@
       <!-- Business-side test -->
       <div class="discovery-card">
         <div class="discovery-title">Test 02 · SME side</div>
-        <p class="discovery-sub">Me — speak to 30 SMEs. Show all three packages.</p>
+        <p class="discovery-sub">Speak to 30 SMEs. Show all three packages.</p>
         <p style="font-family:var(--display); font-style:italic; font-size:17px; color:var(--ink); margin-bottom:18px; line-height:1.4;">
           "Which of these would you pay for <em>this month?</em>"
           — not "would you be interested." Force a real choice.
         </p>
-        <p style="font-size:13px; color:var(--ink-muted); margin-bottom:8px; letter-spacing:0.06em; text-transform:uppercase; font-family:var(--mono);">Show these three options</p>
+        <p style="font-size:13px; color:var(--ink-muted); margin-bottom:8px; letter-spacing:0.06em; text-transform:uppercase; font-family:var(--mono);">Show these three</p>
         <ol class="discovery-list">
           <li>Starter Content Test — ₦100k–₦150k · 1–2 creator videos</li>
           <li>Nano Campaign — ₦250k–₦300k · 3–5 nano creators</li>
@@ -844,19 +796,17 @@
   </div>
 </section>
 
-<!-- =========================================================
-     08 — VERDICT
-     ========================================================= -->
+<!-- 08 VERDICT -->
 <section id="verdict" class="reasons">
   <div class="container">
     <div class="reveal">
-      <div class="section-tag">Chapter 06 / My verdict</div>
+      <div class="section-tag">Chapter 06 / Our verdict</div>
       <h2 class="section-title">Two paths. <em>One trigger.</em></h2>
       <p class="section-lede">
-        After both tests, here's how I want us to decide. The trigger is
-        the SME side: if budgets land where I think they should, we run
-        the influencer model. If they don't, we don't force it — we pivot
-        to UGC-for-ads, which fits SME budgets better.
+        How we decide after both tests. The trigger is the SME side: if
+        budgets land where we think they should, we run the influencer
+        model. If they don't, we pivot to UGC-for-ads — which fits SME
+        budgets better.
       </p>
     </div>
 
@@ -864,9 +814,9 @@
       <div class="score-card green">
         <div class="score-tag"><span class="dot"></span>Path A · run it</div>
         <p class="score-evidence">
-          If we can sell 5 campaigns at ₦250k–₦750k, pay creators properly,
-          keep at least 25% margin, and get 2 businesses interested in
-          repeating — the model works.
+          We close 5 campaigns at ₦250k–₦750k, pay creators properly,
+          keep 25% margin, and get 2 businesses interested in repeating.
+          The model works.
         </p>
         <div class="score-decision">
           <span class="score-decision-label">Decision</span>
@@ -883,7 +833,7 @@
         <div class="score-decision">
           <span class="score-decision-label">Decision</span>
           Narrow to one vertical where Package 02 keeps closing. Drop the
-          others for now. Tighten the creator bench. Re-test in 30 days.
+          others. Tighten the creator bench. Re-test in 30 days.
         </div>
       </div>
       <div class="score-card red">
@@ -896,9 +846,8 @@
         <div class="score-decision">
           <span class="score-decision-label">Decision</span>
           Pivot to <strong style="color:var(--ink);">UGC content for ads.</strong>
-          Creators make videos, SME posts and boosts them through
-          TikTok / Meta ads. Cheaper for the SME, simpler for us, fits the
-          budget reality.
+          Creators make videos, SME posts and boosts via TikTok / Meta
+          ads. Cheaper for the SME, simpler for us, fits the budget reality.
         </div>
       </div>
     </div>
@@ -907,33 +856,24 @@
       <div class="callout-label">The validation target</div>
       <p class="callout-text">
         <strong>5 campaigns at ₦250k–₦750k. 25% margin floor. 2 repeat
-        conversations.</strong> That's the bar. If we hit it inside 90
-        days, we keep building. If we miss it badly, we pivot — no ego.
+        conversations.</strong> That's the bar. Hit it inside 90 days,
+        we keep building. Miss it badly, we pivot — no ego.
       </p>
     </div>
   </div>
 </section>
 
-<!-- =========================================================
-     CLOSING + SOURCES
-     ========================================================= -->
+<!-- CLOSING + SOURCES -->
 <section class="closing">
   <div class="container">
     <div class="reveal">
-      <h2 class="closing-title">Read this. Then let's <em>talk.</em></h2>
+      <h2 class="closing-title">Read this. Then <em>decide.</em></h2>
       <p class="closing-blurb">
-        Daniel, Samuel — this is my best honest answer to the two
-        questions you raised. I want both of you to push back where you
-        disagree. Especially on the fee bands (Samuel — does this match
-        what you're hearing?) and the package economics (Daniel — does
-        25% margin actually survive the tracking and report work?). Let's
-        sit down before we start dialling SMEs and lock the version
-        we're going to test.
-      </p>
-
-      <p class="signoff">
-        Sent with the research,<br />
-        <span class="name">— Michael</span>
+        This is the honest answer to the two questions. The fee bands
+        come from a Nigerian industry source; the platform monetization
+        picture from public reporting. The packages are our proposal —
+        push back on the splits and the margin floor before we start
+        dialling SMEs. We lock the version we test in our next meeting.
       </p>
     </div>
 
@@ -954,10 +894,10 @@
         Version 1.0
       </div>
       <div>
-        <h6>From / To</h6>
-        Michael →<br />
-        Daniel (Data Lead)<br />
-        Samuel (Creator Lead)
+        <h6>Date</h6>
+        17 May 2026<br />
+        Lagos · Nigeria<br />
+        For decision
       </div>
       <div>
         <h6>Target</h6>
