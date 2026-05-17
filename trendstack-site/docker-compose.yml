@@ -1,0 +1,20 @@
+services:
+  site:
+    build:
+      context: .
+    image: trendstack-site:local
+    expose:
+      - "80"
+    networks:
+      default:
+      # Shared production network so Cloudflare Tunnel can target this site
+      # directly by Docker DNS without exposing it on the host.
+      trendstack-production-shared:
+        aliases:
+          - trendstack-site
+    restart: unless-stopped
+
+networks:
+  trendstack-production-shared:
+    name: trendstack-production-shared
+    external: true
