@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TrendStack Nigeria — Founder Operations</title>
+<meta name="description" content="The 90-day operator role split for TrendStack's three co-founders. CEO, Creator Lead, Data Lead — clear responsibilities, KPIs and cadence." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* page-specific tweaks for the Founders volume */
+  .role-mission {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .tier-1 .role-mission { color: var(--rust); }
+  .tier-2 .role-mission { color: var(--teal-deep); }
+  .tier-3 .role-mission { color: var(--gold); }
+
+  /* compact ceo metrics override */
+  .metrics-row.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 720px) {
+    .metrics-row.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* phase bullets: stronger role label */
+  .phase-bullets li b {
+    color: var(--ink);
+    font-weight: 500;
+    margin-right: 4px;
+  }
+
+  /* boundaries section override (slab) */
+  .boundaries-section {
+    background: var(--slab);
+    color: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .boundaries-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.04 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    pointer-events: none;
+  }
+  .boundaries-section .section-tag { color: var(--teal-soft); }
+  .boundaries-section .section-tag::before { background: var(--teal-soft); }
+  .boundaries-section .section-lede { color: rgba(237, 229, 210, 0.78); }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- =========================================================
+     TOP NAV
+     ========================================================= -->
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span>
+      TrendStack Nigeria
+    </a>
+    <ul class="nav-links">
+      <li><a href="#mindset" data-num="01">Mindset</a></li>
+      <li><a href="#roles" data-num="02">Roles</a></li>
+      <li><a href="#ceo" data-num="03">CEO</a></li>
+      <li><a href="#creator-lead" data-num="04">Creator</a></li>
+      <li><a href="#data-lead" data-num="05">Data</a></li>
+      <li><a href="#cadence" data-num="06">Cadence</a></li>
+    </ul>
+    <a href="index.html" class="nav-cta">← Playbook</a>
+  </div>
+</header>
+
+<!-- =========================================================
+     COVER
+     ========================================================= -->
+<section class="cover" id="top">
+  <div class="container">
+    <div class="cover-grid">
+      <div class="cover-meta">
+        <div class="cover-meta-block">
+          <span>Vol. 05</span>
+          <span>Founder Operations</span>
+        </div>
+        <div class="cover-meta-block">
+          <span>17 May 2026</span>
+          <span>Version 1.0</span>
+        </div>
+        <div class="cover-meta-block">
+          <span>Lagos · Nigeria</span>
+          <span>90-day mandate</span>
+        </div>
+        <div class="cover-meta-block">
+          <span>Prepared for</span>
+          <span>3 co-founders</span>
+        </div>
+      </div>
+
+      <div class="cover-title-row">
+        <div>
+          <h1 class="cover-title">
+            <span class="word">Founders.</span><br />
+            <span class="word italic">Operators.</span>
+          </h1>
+        </div>
+        <p class="cover-subtitle">
+          Three co-founders. Three operating roles. Software is delayed —
+          operations are owned.
+        </p>
+      </div>
+
+      <div class="cover-bottom">
+        <p class="cover-blurb">
+          For the next 60–90 days, your co-founders should not think of
+          themselves as "mobile engineer" and "backend engineer."
+          They should temporarily become <strong>operators</strong>. Inside:
+          the mindset shift, three clear roles, weekly targets, and the rule
+          for when software is allowed back.
+        </p>
+        <div class="cover-toc">
+          <div class="cover-toc-label">Inside this volume</div>
+          <ul class="cover-toc-list">
+            <li><a href="#mindset"><span class="num">01</span> The mindset shift</a></li>
+            <li><a href="#roles"><span class="num">02</span> The role split</a></li>
+            <li><a href="#ceo"><span class="num">03</span> CEO &amp; sales</a></li>
+            <li><a href="#creator-lead"><span class="num">04</span> Creator lead</a></li>
+            <li><a href="#data-lead"><span class="num">05</span> Data lead</a></li>
+            <li><a href="#cadence"><span class="num">06</span> Cadence &amp; return</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <span class="scroll-cue-line"></span>
+    <span>00 / 07</span>
+  </div>
+</section>
+
+<!-- =========================================================
+     PRINCIPLE
+     ========================================================= -->
+<section class="principle">
+  <div class="container">
+    <div class="principle-inner">
+      <div class="principle-mark">¶</div>
+      <p class="principle-text">
+        TrendStack is <strong>not stopping technology.</strong>
+        TrendStack is <strong>delaying product engineering</strong> until
+        the manual business model is proven.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     01 — MINDSET SHIFT
+     ========================================================= -->
+<section id="mindset">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Chapter 01 / Mindset shift</div>
+      <h2 class="section-title">From <em>engineers</em> to operators.</h2>
+      <p class="section-lede">
+        Your co-founders should still use their engineering skills — but on
+        operations, data, tracking, reporting, creator quality and campaign
+        execution, not on building a full app. The real risk now is not
+        lack of software. The real risk is no repeat paying businesses.
+      </p>
+    </div>
+
+    <div class="pivot-grid reveal">
+      <div class="pivot-col-head from">
+        <span class="label">Before</span>
+        <span class="word">Engineer</span>
+      </div>
+      <div class="pivot-col-head to">
+        <span class="label">For 90 days</span>
+        <span class="word">Operator</span>
+      </div>
+
+      <div class="pivot-row">
+        <div class="pivot-cell from">Build a mobile app.</div>
+        <div class="pivot-cell to">Build the creator-side experience by hand.</div>
+      </div>
+      <div class="pivot-row">
+        <div class="pivot-cell from">Rebuild the backend platform.</div>
+        <div class="pivot-cell to">Build the operating system in Sheets, Forms and Drive.</div>
+      </div>
+      <div class="pivot-row">
+        <div class="pivot-cell from">Add features nobody has paid for.</div>
+        <div class="pivot-cell to">Track every paid campaign end to end.</div>
+      </div>
+      <div class="pivot-row">
+        <div class="pivot-cell from">Hide behind code.</div>
+        <div class="pivot-cell to">Speak to creators, businesses and reports.</div>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="callout-label">The brutal truth</div>
+      <p class="callout-text">
+        A technical co-founder who helps you close, run, track and report
+        campaigns for paying customers is <strong>more valuable right now</strong>
+        than one who quietly builds features nobody has paid for.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     02 — THE ROLE SPLIT
+     ========================================================= -->
+<section id="roles" class="reasons">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Chapter 02 / The role split</div>
+      <h2 class="section-title">Three founders. <em>Three engines.</em></h2>
+      <p class="section-lede">
+        Each role owns one business engine. Nobody covers more than one.
+        This is the only way to stop all three of you drifting into
+        general-purpose busywork that doesn't move the company forward.
+      </p>
+    </div>
+
+    <div class="tiers-grid reveal">
+      <div class="tier tier-1">
+        <div class="tier-badge">Role 01 · You</div>
+        <h3 class="tier-name">CEO.</h3>
+        <div class="role-mission">Sales · Strategy</div>
+        <ul class="tier-list">
+          <li>Close paying SMEs.</li>
+          <li>Pick the niche. Set the menu. Defend pricing.</li>
+          <li>Lead outreach &amp; close paid pilots.</li>
+          <li>Control the campaign promise.</li>
+          <li>Own partnerships and repeat buyers.</li>
+        </ul>
+      </div>
+      <div class="tier tier-2">
+        <div class="tier-badge">Role 02 · Mobile co-founder</div>
+        <h3 class="tier-name">Creator Lead.</h3>
+        <div class="role-mission">Creators · Campaigns</div>
+        <ul class="tier-list">
+          <li>Recruit and vet 30–50 creators.</li>
+          <li>Run creator tiers &amp; reliability scoring.</li>
+          <li>Own content review and revision flow.</li>
+          <li>Coordinate posting and proof.</li>
+          <li>Build the reliable creator supply system.</li>
+        </ul>
+      </div>
+      <div class="tier tier-3">
+        <div class="tier-badge">Role 03 · Backend co-founder</div>
+        <h3 class="tier-name">Data Lead.</h3>
+        <div class="role-mission">Tracking · Payouts · Reports</div>
+        <ul class="tier-list">
+          <li>Run the single campaign tracker.</li>
+          <li>Maintain the creator database.</li>
+          <li>Tracking, fraud checks, payout proof.</li>
+          <li>Deliver every report within 72 hours.</li>
+          <li>Build internal tooling — never the product.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="payment-rule reveal" style="margin-top:48px;">
+      <strong>Why this works:</strong> creators are mobile-first — they live on
+      WhatsApp, TikTok, Instagram. A mobile engineer naturally understands user
+      flow, friction and onboarding. Backend engineers naturally understand
+      structured data, tracking and reporting. Both apply that instinct to
+      operations first — not to a product nobody has paid for yet.
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     03 — ROLE 01: CEO
+     ========================================================= -->
+<section id="ceo">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Chapter 03 / Role 01 · You</div>
+      <h2 class="section-title">CEO — <em>find the buyer.</em></h2>
+      <p class="section-lede">
+        Focus on the thing that can kill the company fastest:
+        <strong style="color:var(--ink);">can TrendStack get Nigerian SMEs to pay repeatedly?</strong>
+        Don't spend most of your time managing creators. Spend it finding
+        out whether businesses will pay.
+      </p>
+    </div>
+
+    <div class="reasons-grid reveal">
+      <div class="reason">
+        <div class="reason-num">A · NICHE</div>
+        <h3 class="reason-title">Pick the first vertical</h3>
+        <p class="reason-desc">
+          Beauty, fashion, food, restaurants or startups. Pick one. Defend
+          it. Don't dilute the offer across all five.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">B · PRICING</div>
+        <h3 class="reason-title">Packages &amp; price</h3>
+        <p class="reason-desc">
+          Set the menu. Hold the line on price. Refuse what doesn't fit.
+          Decide what TrendStack will and will not offer.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">C · OUTREACH</div>
+        <h3 class="reason-title">Lead the sale</h3>
+        <p class="reason-desc">
+          Speak to SME owners daily. Send proposals fast. Close paid pilots.
+          This is the only activity that proves the company.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">D · PROMISE</div>
+        <h3 class="reason-title">Own the campaign promise</h3>
+        <p class="reason-desc">
+          Control what TrendStack will deliver. Protect the brand from bad
+          campaigns. Reject creators and briefs that don't fit.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">E · REVIEW</div>
+        <h3 class="reason-title">Read every result</h3>
+        <p class="reason-desc">
+          Sit with the business on every campaign report. Decide what's next.
+          Close the loop yourself — don't delegate the verdict.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">F · REPEAT</div>
+        <h3 class="reason-title">Drive repeat business</h3>
+        <p class="reason-desc">
+          Build case studies. Push for repeat bookings. Decide which niche
+          actually works once you have 5 paid campaigns of evidence.
+        </p>
+      </div>
+    </div>
+
+    <div class="metrics-row cols-3 reveal" style="margin-top:64px;">
+      <div class="metric">
+        <div class="metric-value">5<span class="unit">paid</span></div>
+        <div class="metric-label">SME campaigns in 90 days</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">2<span class="unit">+</span></div>
+        <div class="metric-label">Repeat conversations or bookings</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">1<span class="unit">niche</span></div>
+        <div class="metric-label">Chosen, defended, repeated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     04 — ROLE 02: CREATOR LEAD (mobile co-founder)
+     ========================================================= -->
+<section id="creator-lead" class="reasons">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Chapter 04 / Role 02 · Mobile co-founder</div>
+      <h2 class="section-title">Creator &amp; Campaign <em>Lead.</em></h2>
+      <p class="section-lede">
+        Design the creator experience as if it were an app — but execute it
+        through WhatsApp, Forms, Sheets and Drive. The job is not "bring
+        influencers." The job is to build a <strong style="color:var(--ink);">reliable
+        creator supply system</strong>. No app yet.
+      </p>
+    </div>
+
+    <div class="reasons-grid reveal">
+      <div class="reason">
+        <div class="reason-num">A · RECRUIT</div>
+        <h3 class="reason-title">The vetted bench</h3>
+        <p class="reason-desc">
+          30–50 creators in 21 days. Capture niche, follower count,
+          average views, audience, sample work, rate, reliability and
+          fraud risk for each.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">B · SCORE</div>
+        <h3 class="reason-title">Tier the creators</h3>
+        <p class="reason-desc">
+          New · Verified · Trusted. Small fixed-fee gigs only for new.
+          Better campaigns and small bonuses unlocked at Trusted.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">C · ONBOARD</div>
+        <h3 class="reason-title">Application &amp; rules</h3>
+        <p class="reason-desc">
+          Application form, welcome message, participation rules, content
+          rules, payment expectations, disclosure reminders.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">D · REVIEW</div>
+        <h3 class="reason-title">The 9-step loop</h3>
+        <p class="reason-desc">
+          Brief → confirm → draft → review → approve / revise → post →
+          proof → analytics → pay. Same loop, every campaign.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">E · CHANNELS</div>
+        <h3 class="reason-title">Disciplined comms</h3>
+        <p class="reason-desc">
+          One announcement channel. One campaign chat. One form. One
+          tracker. Never one chaotic group where everyone talks.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">F · IMPROVE</div>
+        <h3 class="reason-title">Drop &amp; promote</h3>
+        <p class="reason-desc">
+          Track dropout. Remove unreliable creators. Promote consistent
+          ones into the Trusted tier. Tighten the pool every cycle.
+        </p>
+      </div>
+    </div>
+
+    <div class="metrics-row reveal" style="margin-top:64px;">
+      <div class="metric">
+        <div class="metric-value">30–50<span class="unit">vetted</span></div>
+        <div class="metric-label">Creators in 21 days</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">20<span class="unit">+</span></div>
+        <div class="metric-label">Campaign-ready by niche</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">24<span class="unit">h</span></div>
+        <div class="metric-label">Max creator response time</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">80<span class="unit">%</span></div>
+        <div class="metric-label">On-time submissions</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">70<span class="unit">%</span></div>
+        <div class="metric-label">First-draft approval</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">0<span class="unit">paid</span></div>
+        <div class="metric-label">Without proof of posting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     05 — ROLE 03: DATA LEAD (backend co-founder)
+     ========================================================= -->
+<section id="data-lead">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Chapter 05 / Role 03 · Backend co-founder</div>
+      <h2 class="section-title">Data, tracking, payouts &amp; <em>reports.</em></h2>
+      <p class="section-lede">
+        Don't build the full backend yet. Build the manual data
+        infrastructure that lets campaigns run without confusion. Every
+        campaign tracked. Every creator logged. Every naira accounted
+        for. Every result reportable. Every fraud signal noticed.
+      </p>
+    </div>
+
+    <div class="reasons-grid reveal">
+      <div class="reason">
+        <div class="reason-num">A · BUILD</div>
+        <h3 class="reason-title">Campaign tracker</h3>
+        <p class="reason-desc">
+          One Sheet / Airtable. Business, package, budget, creators,
+          status, payment, tracking link, results — all in one place.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">B · STRUCTURE</div>
+        <h3 class="reason-title">Creator database</h3>
+        <p class="reason-desc">
+          Creator ID, niche, follower count, engagement, history, on-time
+          score, fraud risk, tier, payment history. Future schema, today.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">C · TRACK</div>
+        <h3 class="reason-title">Per-campaign signal</h3>
+        <p class="reason-desc">
+          UTMs, Bitly, WhatsApp links, coupon codes, screenshots, manual
+          enquiry logs. Credible — not perfect. Just enough to show ROI.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">D · DETECT</div>
+        <h3 class="reason-title">Fraud &amp; quality rules</h3>
+        <p class="reason-desc">
+          View spikes, generic comments, audience mismatch, post deletion,
+          manipulated screenshots. Simple rules + manual review. No AI.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">E · PAY</div>
+        <h3 class="reason-title">Payout ledger</h3>
+        <p class="reason-desc">
+          Fee, approval, bonus, due date, status, posting proof,
+          screenshot proof, hold reason. Margin per campaign. No casual
+          payments via random WhatsApp instruction.
+        </p>
+      </div>
+      <div class="reason">
+        <div class="reason-num">F · REPORT</div>
+        <h3 class="reason-title">72-hour report</h3>
+        <p class="reason-desc">
+          Goal, posts, views, link clicks, coupon usage, orders / leads,
+          best creator, next steps. One reusable template, fraud checklist,
+          payout checklist.
+        </p>
+      </div>
+    </div>
+
+    <div class="metrics-row reveal" style="margin-top:64px;">
+      <div class="metric">
+        <div class="metric-value">100<span class="unit">%</span></div>
+        <div class="metric-label">Campaigns in one tracker</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">100<span class="unit">%</span></div>
+        <div class="metric-label">Creators with campaign IDs</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">100<span class="unit">%</span></div>
+        <div class="metric-label">Payouts logged</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">72<span class="unit">h</span></div>
+        <div class="metric-label">Report SLA per campaign</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">0<span class="unit">paid</span></div>
+        <div class="metric-label">Without posting proof</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">1<span class="unit">each</span></div>
+        <div class="metric-label">Reusable report &amp; fraud template</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     06 — BOUNDARIES (Stop / Keep / Start)
+     ========================================================= -->
+<section class="boundaries-section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Boundaries</div>
+      <h2 class="section-title" style="color:var(--ink);">The next 90 days: <em>nothing else.</em></h2>
+      <p class="section-lede">
+        Engineering instinct will pull your co-founders back toward
+        building. Resist it. Here is the line — what's forbidden, what's
+        done by hand, and the small set of tools that <em>are</em> allowed.
+      </p>
+    </div>
+
+    <div class="sks-grid reveal">
+      <div class="sks-col sks-stop">
+        <div class="sks-tag"><span class="dot"></span>Forbidden</div>
+        <h3 class="sks-title">Do not build.</h3>
+        <ul class="sks-list">
+          <li>A new mobile app.</li>
+          <li>The old campaign marketplace, rebuilt.</li>
+          <li>Complex dashboards or matching.</li>
+          <li>Automated payments or AI fraud detection.</li>
+          <li>Hundreds of creators recruited at once.</li>
+          <li>Anything that hides from the sales conversation.</li>
+        </ul>
+      </div>
+      <div class="sks-col sks-keep">
+        <div class="sks-tag"><span class="dot"></span>Manual ops</div>
+        <h3 class="sks-title">Do by hand.</h3>
+        <ul class="sks-list">
+          <li>Creator vetting, onboarding, communication.</li>
+          <li>Brief writing, submission review, revisions.</li>
+          <li>Posting confirmation &amp; screenshot proof.</li>
+          <li>Tracking via UTM, Bitly, coupons, manual logs.</li>
+          <li>Payout approval and ledger entry.</li>
+          <li>Campaign reports in Docs / Slides.</li>
+        </ul>
+      </div>
+      <div class="sks-col sks-start">
+        <div class="sks-tag"><span class="dot"></span>Lightweight tools</div>
+        <h3 class="sks-title">Allowed now.</h3>
+        <ul class="sks-list">
+          <li>Landing page for SME packages.</li>
+          <li>Creator application &amp; business inquiry forms.</li>
+          <li>Campaign tracker &amp; creator database in Sheets.</li>
+          <li>Payout ledger &amp; report template.</li>
+          <li>Link tracking &amp; coupon setup.</li>
+          <li>Internal campaign status dashboard.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout reveal" style="margin-top:64px;">
+      <div class="callout-label">Two rules</div>
+      <p class="callout-text">
+        If it helps run paid campaigns <strong>this week</strong>, build it.
+        If it is for a future scalable platform, <strong>delay it.</strong>
+        Aim for 80&#37; operations · 20&#37; lightweight tools.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     07 — CADENCE (90-day phases + targets)
+     ========================================================= -->
+<section id="cadence" class="workflow">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Chapter 06 / Cadence</div>
+      <h2 class="section-title">90 days. Weekly. <em>Then decide.</em></h2>
+      <p class="section-lede">
+        Run on a tight rhythm so nobody drifts. Four phases. One founder
+        meeting a week. One clear bar to clear before any software is
+        allowed back.
+      </p>
+    </div>
+
+    <div class="timeline-wrapper reveal">
+      <div class="timeline">
+        <div class="phase">
+          <div class="phase-dot">01</div>
+          <div class="phase-days">Weeks 1–2 · Setup</div>
+          <h3 class="phase-title">Build the manual rails.</h3>
+          <p class="phase-desc">
+            Everyone builds in parallel. Nothing is being sold yet — but
+            every piece of infrastructure for the first sale gets laid down.
+          </p>
+          <ul class="phase-bullets">
+            <li><b>You:</b> finalize offer, pricing, prospect list. Start sales calls.</li>
+            <li><b>Creator Lead:</b> recruit and vet 30–50 creators. Build the scoring sheet.</li>
+            <li><b>Data Lead:</b> build the campaign tracker, creator database, payout ledger, report template.</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">02</div>
+          <div class="phase-days">Weeks 3–6 · First sales</div>
+          <h3 class="phase-title">Close and deliver.</h3>
+          <p class="phase-desc">
+            First paid pilots are live. Operations get stress-tested.
+            Everyone touches a real campaign.
+          </p>
+          <ul class="phase-bullets">
+            <li><b>You:</b> close paid pilots. Daily SME conversations. Defend pricing.</li>
+            <li><b>Creator Lead:</b> match creators to campaigns. Review submissions. Track reliability.</li>
+            <li><b>Data Lead:</b> track progress. Monitor links and codes. Manage payouts. Prepare reports.</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">03</div>
+          <div class="phase-days">Weeks 7–10 · Repeat &amp; refine</div>
+          <h3 class="phase-title">Push toward repeat.</h3>
+          <p class="phase-desc">
+            Now we're optimizing. Case studies emerge. Bad creators get
+            dropped. The pool tightens. The story sharpens.
+          </p>
+          <ul class="phase-bullets">
+            <li><b>You:</b> push for repeat campaigns. Build case studies. Decide which niche wins.</li>
+            <li><b>Creator Lead:</b> improve the pool. Remove unreliable creators. Create the Trusted tier.</li>
+            <li><b>Data Lead:</b> improve fraud checks. Raise report quality. Analyze campaign margin.</li>
+          </ul>
+        </div>
+        <div class="phase">
+          <div class="phase-dot">04</div>
+          <div class="phase-days">Weeks 11–13 · Decide</div>
+          <h3 class="phase-title">Verdict on the model.</h3>
+          <p class="phase-desc">
+            All three of you sit down with the data. Continue, narrow, or
+            change. Identify the top repeated pains worth automating.
+          </p>
+          <ul class="phase-bullets">
+            <li>Review results — paid campaigns, repeat customers, margin, creator quality.</li>
+            <li>Decide whether to continue the manual model.</li>
+            <li>Identify what, if anything, should become software.</li>
+            <li>List the top repeated manual pains.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="targets-card">
+        <div class="targets-label">90-day targets</div>
+        <ul class="targets-list">
+          <li class="target-item">
+            <div class="target-value">5</div>
+            <div class="target-name">Paid SME campaigns closed</div>
+          </li>
+          <li class="target-item">
+            <div class="target-value">2+</div>
+            <div class="target-name">Repeat conversations or bookings</div>
+          </li>
+          <li class="target-item">
+            <div class="target-value">30–50</div>
+            <div class="target-name">Vetted creators on the bench</div>
+          </li>
+          <li class="target-item">
+            <div class="target-value">72h</div>
+            <div class="target-name">Report after every campaign</div>
+          </li>
+          <li class="target-item">
+            <div class="target-value">1 niche</div>
+            <div class="target-name">Chosen, defended, repeated</div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     WEEKLY RHYTHM
+     ========================================================= -->
+<section>
+  <div class="container container-narrow">
+    <div class="reveal">
+      <div class="section-tag">Weekly meeting</div>
+      <h2 class="section-title">Ten questions. <em>One hour.</em></h2>
+      <p class="section-lede">
+        One founder meeting a week. Ask only these ten questions. Skip
+        everything else. It keeps the team focused on business proof — not
+        activity.
+      </p>
+    </div>
+
+    <div class="discovery-card reveal">
+      <div class="discovery-title">Founders standup</div>
+      <p class="discovery-sub">Run this top to bottom. Don't drift.</p>
+      <ol class="discovery-list">
+        <li>How many businesses did we speak to?</li>
+        <li>How many proposals did we send?</li>
+        <li>How many paid campaigns did we close?</li>
+        <li>Which creators are campaign-ready?</li>
+        <li>Which creators failed or behaved badly?</li>
+        <li>Which campaigns are currently active?</li>
+        <li>Which reports are due?</li>
+        <li>Did we make margin?</li>
+        <li>Did any business ask to repeat?</li>
+        <li>What manual process is painful enough to automate?</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     RETURN CLAUSE — when software is allowed back
+     ========================================================= -->
+<section class="reasons">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Return clause</div>
+      <h2 class="section-title">When software is <em>allowed back.</em></h2>
+      <p class="section-lede">
+        Build software only when you can say: <em>"We have done this
+        manually 10–20 times, and the same workflow keeps repeating."</em>
+        Until then, software is premature.
+      </p>
+    </div>
+
+    <div class="scorecard-grid reveal">
+      <div class="score-card green">
+        <div class="score-tag"><span class="dot"></span>Green · build</div>
+        <p class="score-evidence">
+          10+ paid campaigns completed. 3+ repeat customers. A known
+          winning segment. A stable workflow. A known report format.
+        </p>
+        <div class="score-decision">
+          <span class="score-decision-label">Decision</span>
+          Start building the smallest piece of software that automates the
+          most painful manual step. Nothing more.
+        </div>
+      </div>
+      <div class="score-card yellow">
+        <div class="score-tag"><span class="dot"></span>Yellow · hold</div>
+        <p class="score-evidence">
+          Paid campaigns running, but margin or repeat is weak. Reports
+          inconsistent. Some creators unreliable.
+        </p>
+        <div class="score-decision">
+          <span class="score-decision-label">Decision</span>
+          Don't build yet. Fix pricing, tighten the bench, raise report
+          quality. Re-check at 30 days.
+        </div>
+      </div>
+      <div class="score-card red">
+        <div class="score-tag"><span class="dot"></span>Red · do not build</div>
+        <p class="score-evidence">
+          Interest without payment. Chaotic campaigns. No repeat. Margin
+          unclear. Founders drifting.
+        </p>
+        <div class="score-decision">
+          <span class="score-decision-label">Decision</span>
+          Stop. Re-scope the offer or the target customer. Software does
+          not solve a missing buyer.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CLOSING
+     ========================================================= -->
+<section class="closing">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="closing-title">Earn the right to be <em>engineers again.</em></h2>
+      <p class="closing-blurb">
+        We are not abandoning software — we are discovering what software
+        is worth building. The manual phase is research, sales validation,
+        operational design, and product discovery. Run the playbook.
+        Deliver strong reports. Find the repeat buyer. Then decide what
+        software is actually needed.
+      </p>
+    </div>
+
+    <div class="colophon">
+      <div>
+        <h6>Document</h6>
+        TrendStack Founder Operations<br />
+        Volume 05 · Roles<br />
+        Version 1.0
+      </div>
+      <div>
+        <h6>Prepared</h6>
+        17 May 2026<br />
+        For three co-founders<br />
+        Lagos · Nigeria
+      </div>
+      <div>
+        <h6>Mandate</h6>
+        90 days<br />
+        5 paid SME campaigns<br />
+        2 repeat conversations
+      </div>
+      <div>
+        <h6>Rule</h6>
+        80&#37; operations<br />
+        20&#37; lightweight tools<br />
+        0&#37; premature platform
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Scroll progress bar
+  const progress = document.getElementById("scrollProgress");
+  const updateProgress = () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progress.style.width = scrolled + "%";
+  };
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  // Section count cue
+  const sections = document.querySelectorAll("section[id]");
+  const cueCount = document.querySelector(".scroll-cue span:last-child");
+  const total = String(sections.length).padStart(2, "0");
+  if (cueCount) {
+    const cueIO = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const idx = Array.from(sections).indexOf(e.target) + 1;
+            cueCount.textContent =
+              String(idx).padStart(2, "0") + " / " + total;
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    sections.forEach((s) => cueIO.observe(s));
+  }
+</script>
+
+</body>
+</html>
